@@ -1,4 +1,4 @@
-@import "./responsive.scss";
+@import "../../responsive.scss";
 
 .layout {
     
@@ -10,7 +10,7 @@
     flex-direction: column;
 
     @include md {
-        max-width: 768px; // Tablet size
+        max-width: 768px; 
     }
 
     @include sm {
