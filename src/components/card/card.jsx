@@ -22,8 +22,19 @@ export default function Card({ item }) {
                     <img src="/bed.png" alt="" />
                     <span>{item.bedroom}bedroom</span>
                 </div>
+                <div className="feature">
+                    <img src="/bath.png" alt="" />
+                    <span>{item.bathroom}Bathroom</span>
+                </div>
             </div>
-            <div className="icons"></div>
+            <div className="icons">
+                <div className="icon">
+                    <img src="/save.png" alt="" />
+                </div>
+                <div className="icon">
+                    <img src="/chat.png" alt="" />
+                </div>
+            </div>
         </div>
       </div>
     </div>
