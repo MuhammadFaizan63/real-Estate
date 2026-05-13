@@ -1,28 +1,26 @@
 @import "./responsive.scss";
 
-.layout{
-    height: 100vh;
-     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+.layout {
+    
+    min-height: 100vh; 
+    max-width: 1366px; 
+    margin: 0 auto;    
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
 
-    
     @include md {
-        // background-color: rgb(151, 179, 231);
-        max-width: 768px;
-    }
-    
-    @include sm {
-        // background-color: rgb(136, 73, 73);
-        max-width: 640px;
+        max-width: 768px; // Tablet size
     }
 
-    .content{
-        flex: 1;
+    @include sm {
+        max-width: 100%; 
+        padding: 0 15px; 
     }
-    
+
+    .content {
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+    }
 }

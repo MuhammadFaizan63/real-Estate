@@ -2,10 +2,6 @@
 
 .searchBar {
     .type {
-        @include sm{
-                margin-bottom: 5px;
-                
-            }
         button {
             padding: 16px 36px;
             border: 1px solid #999;
@@ -22,15 +18,15 @@
             &:first-child {
                 border-top-left-radius: 5px;
                 border-right: none;
-            @include sm{
-                border-bottom: 1px solid #999;
-
-            }
             }
 
             &:last-child {
                 border-top-right-radius: 5px;
                 border-left: none;
+            }
+
+            @include sm {
+                padding: 12px 24px; 
             }
         }
     }
@@ -40,38 +36,33 @@
         display: flex;
         justify-content: space-between;
         height: 64px;
-        gap: 5px;
+        gap: 0px; 
 
         @include sm {
             flex-direction: column;
             border: none;
+            height: auto; 
+            gap: 10px;    
         }
 
         input {
             border: none;
-            padding: 0px 10px;
+            padding: 0px 15px;
             width: 200px;
+            border-right: 1px solid #999; 
 
             @include lg {
-                padding: 0px 5px;
+                width: 150px;
+            }
 
-                &:nth-child(2),
-                &:nth-child(3) {
-                    width: 140px;
-                }
+            @include md {
+                width: 120px;
+            }
 
-                @include md {
-                    width: auto;
-
-                    &:nth-child(2),
-                    &:nth-child(3) {
-                        width: auto;
-                    }
-                }
-
-                @include sm {
-                    padding: 20px;
-                }
+            @include sm {
+                padding: 15px;
+                border: 1px solid #999; 
+                width: auto;           
             }
         }
 
@@ -79,11 +70,19 @@
             border: none;
             cursor: pointer;
             background-color: #fece51;
-            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            transition: background-color 0.3s;
 
-            @include sm{
-                padding: 10px;
-                
+            &:hover {
+                background-color: darken(#fece51, 10%);
+            }
+
+            @include sm {
+                padding: 15px;
+                border-radius: 5px;
             }
 
             img {

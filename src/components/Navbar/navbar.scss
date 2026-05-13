@@ -5,6 +5,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; 
+    padding: 0 20px; 
 
     a {
         transition: all 0.4s ease;
@@ -44,6 +46,7 @@ nav {
             }
         }
 
+        
         a:not(.logo) {
             @include sm {
                 display: none;
@@ -63,6 +66,7 @@ nav {
             background-color: transparent;
         }
 
+        
         & > a {
             padding: 12px 24px;
             margin: 0 10px; 
@@ -79,6 +83,7 @@ nav {
         .menuIcon {
             display: none;
             z-index: 1001;
+            margin-right: 10px; 
 
             img {
                 width: 36px;
@@ -119,6 +124,7 @@ nav {
                 }
             }
 
+            
             @media (min-width: 769px) {
                 display: none;
             }
