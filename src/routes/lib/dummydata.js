@@ -110,3 +110,32 @@ export const listData = [
     longitude: -6.2603,
   },
 ];
+
+export const singlePostData = {
+  id: 1,
+  title: "Modern Luxury Apartment",
+  price: 1200,
+  images: [
+    "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  ],
+  bedRooms: 2,
+  bathroom: 1,
+  size: 861,
+  latitude: 51.5074,
+  longitude: -0.1278,
+  city: "London",
+  address: "1234 Broadway St",
+  school: "250m away",
+  bus: "100m away",
+  restaurant: "50m away",
+  description:
+    "Future is looking bright in this beautifully designed 2-bedroom apartment. Located in the heart of London, this property offers a perfect blend of modern architecture and cozy living. With high-end finishes, a spacious balcony, and plenty of natural light, it's an ideal home for professionals or a small family. The neighborhood is vibrant, with top-rated schools, public transport, and the best restaurants just a short walk away.",
+};
+
+export const userData = {
+  id: 1,
+  name: "Muhammad Faizan",
+  img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+};
