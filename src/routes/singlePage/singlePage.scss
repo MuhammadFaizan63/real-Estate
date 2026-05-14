@@ -1,14 +1,34 @@
+@import "../../responsive.scss";
+
 .singlePage {
     display: flex;
-    height: 100%;
+    height: 100vh; 
 
+    @include md {
+        flex-direction: column;
+        height: auto; 
+        overflow: visible;
+    }
 }
 
 .details {
     flex: 3;
+    height: 100%;
+    overflow-y: scroll;
+
+    @include md {
+        flex: none;
+        height: auto; 
+        overflow-y: visible;
+        margin-bottom: 20px;
+    }
 
     .wrapper {
         padding-right: 50px;
+
+        @include md {
+            padding: 20px; 
+        }
     }
 }
 
@@ -19,6 +39,11 @@
         display: flex;
         justify-content: space-between;
 
+        @include sm {
+            flex-direction: column;
+            gap: 20px;
+        }
+
         .post {
             display: flex;
             flex-direction: column;
@@ -26,6 +51,10 @@
 
             h1 {
                 font-weight: 400;
+
+                @include sm {
+                    font-size: 24px;
+                }
             }
 
             .address {
@@ -37,7 +66,6 @@
 
                 img {
                     width: 16px;
-
                 }
             }
 
@@ -56,11 +84,18 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 20px;
-            padding: 0px 50px;
+            gap: 10px;
+            padding: 20px;
             border-radius: 10px;
             background-color: rgba(254, 205, 81, 0.209);
             font-weight: 600;
+
+            @include sm {
+                flex-direction: row;
+                justify-content: flex-start;
+                padding: 10px;
+                width: 100%;
+            }
 
             img {
                 width: 50px;
@@ -74,7 +109,7 @@
     .bottom {
         margin-top: 50px;
         color: #555;
-        line-height: 20px;
+        line-height: 24px;
     }
 }
 
@@ -84,9 +119,15 @@
     height: 100%;
     overflow-y: scroll;
 
+    @include md {
+        flex: none;
+        height: auto; 
+        overflow-y: visible;
+        padding-bottom: 50px;
+    }
 
     .wrapper {
-        padding-right: 0px 20px;
+        padding: 20px; 
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -107,9 +148,10 @@
             align-items: center;
             gap: 10px;
 
-
             img {
                 background-color: rgba(254, 205, 81, 0.209);
+                padding: 5px;
+                border-radius: 5px;
             }
 
             .featureText {
@@ -119,7 +161,6 @@
 
                 p {
                     font-size: 14px;
-
                 }
             }
         }
@@ -132,58 +173,70 @@
             background-color: white;
             border-radius: 10px;
         }
-        
+
         .listHorizontal {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
-            padding: 20px 0px;
+            gap: 10px; 
+            padding: 15px 10px;
             background-color: white;
             border-radius: 10px;
+
+            @include lg {
+                flex-wrap: wrap; 
+            }
         }
 
-            span {
-                font-weight: bold;
-                font-size: 16px;
+        .sizes {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+            @include lg {
+                flex-wrap: wrap;
             }
 
-            .sizes {
+            .size {
                 display: flex;
-                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                background-color: white;
+                padding: 10px;
+                border-radius: 5px;
+                flex: 1;
+                min-width: max-content;
+            }
+        }
 
-                .size {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    background-color: white;
-                    padding: 10px;
-                    border-radius: 5px;
+        .mapContainer {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+            button {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                background-color: white;
+                border: 1px solid #fece51;
+                border-radius: 5px;
+                cursor: pointer;
+                flex: 1;
+
+                img {
+                    width: 16px;
+                    height: 16px;
                 }
             }
-
-            .mapContainer {
-                width: 100%;
-                height: 200px;
-
-            }
-            .buttons{
-                display: flex;
-                justify-content: space-between;
-                button{
-                    padding: 20px;
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
-                    background-color: white;
-                    border: 1px solid #fece51;
-                    border-radius: 5px;
-                    cursor: pointer;
-
-                    img{
-                        width: 16px;
-                        height: 16px;
-                    }
-                }
-            }
+        }
     }
 }
