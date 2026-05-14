@@ -1,8 +1,9 @@
+import Chat from '../../components/chat/chat'
 import List from '../../components/list/list'
 import './profilePage.scss'
 
-export default function ProfilePage(){
-    return(
+export default function ProfilePage() {
+    return (
         <div className="profilePage">
             <div className="details">
                 <div className="wrapper">
@@ -26,8 +27,11 @@ export default function ProfilePage(){
                     <List />
                 </div>
             </div>
-            <div className="chatContainer"></div>
-            <div className="wrapper"></div>
+            <div className="chatContainer">
+                <div className="wrapper">
+                    <Chat/>
+                </div>
+            </div>
         </div>
     )
 }
