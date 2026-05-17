@@ -1,17 +1,10 @@
-@import "../../responsive.scss";
-
 .register {
-  height: calc(100vh - 100px); // Navbar ki height adjust karein
+  height: 100%;
   display: flex;
-  color: #000;
-
-  @include md {
-    height: auto;
-    padding: 20px 0;
-  }
 
   .formContainer {
     flex: 3;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,83 +13,49 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      width: 100%;
-      max-width: 400px;
-
-      @include sm {
-        max-width: 300px;
-      }
-
-      h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
-        font-weight: 600;
-      }
 
       input {
         padding: 20px;
-        border: 1px solid #d3d3d3;
+        border: 1px solid gray;
         border-radius: 5px;
-        font-size: 16px;
-        outline-color: #008080;
-
-        &::placeholder {
-          color: #999;
-        }
       }
 
       button {
-        padding: 15px;
-        border: none;
+        padding: 20px;
         border-radius: 5px;
-        background-color: #008080; // Teal color from your UI
+        border: none;
+        background-color: teal;
         color: white;
         font-weight: bold;
-        font-size: 18px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: #006666;
-        }
 
         &:disabled {
-          background-color: #b5e2e2;
+          background-color: #bed9d8;
           cursor: not-allowed;
         }
       }
 
-      a {
-        text-align: center;
-        color: #555;
-        font-size: 14px;
-        text-decoration: underline;
-        margin-top: 5px;
+      span {
+        color: rgba(255, 0, 0, 0.591);
+      }
 
-        &:hover {
-          color: #000;
-        }
+      a {
+        font-size: 14px;
+        color: gray;
+        border-bottom: 1px solid gray;
+        width: max-content;
       }
     }
   }
 
   .imgContainer {
     flex: 2;
-    background-color: #fcf5f3; // Soft background color from UI
+    background-color: #fcf5f3;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-
-    @include md {
-      display: none; // Mobile par sirf form nazar ayega
-    }
-
     img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 50px; // Spacing around graphics
     }
   }
 }
